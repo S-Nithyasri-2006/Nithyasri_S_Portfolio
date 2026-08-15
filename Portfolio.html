@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nithyasri S - Portfolio</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fafafa;
+            color: #1a1a1a;
+        }
+        
+        /* Custom subtle shadow for standard cards */
+        .card-shadow {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Offset for smooth scrolling so headers don't hide under navbar */
+        section {
+            scroll-margin-top: 140px; 
+        }
+
+        /* Navigation active state transition */
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        .nav-link.active {
+            background-color: #1f2937; /* Gray 800 */
+            color: white;
+        }
+
+        /* Hide scrollbar for certificates slider but keep functionality */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* 3D Flip Card CSS */
+        .perspective {
+            perspective: 1000px;
+        }
+        .transform-style-3d {
+            transform-style: preserve-3d;
+        }
+        .backface-hidden {
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+        .rotate-y-180 {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-gray-300">
+
+    <!-- Sticky Navbar -->
+    <header class="fixed top-6 left-0 right-0 z-50 flex justify-center w-full px-4">
+        <nav class="bg-[#e5e7eb] rounded-full px-6 py-3 flex items-center justify-between w-full max-w-5xl shadow-sm border border-gray-200">
+            <!-- Logo -->
+            <a href="#about" class="text-xl font-bold flex items-center gap-2 text-gray-800">
+                <i class="fa-solid fa-leaf"></i> Nithyasri
+            </a>
+            
+            <!-- Links -->
+            <ul class="hidden md:flex gap-1 items-center text-sm font-medium text-gray-600">
+                <li><a href="#home" class="nav-link px-4 py-2 rounded-full hover:bg-gray-300">Home</a></li>
+                <li><a href="#about" class="nav-link px-4 py-2 rounded-full hover:bg-gray-300 active">About</a></li>
+                <li><a href="#skills" class="nav-link px-4 py-2 rounded-full hover:bg-gray-300">Skills</a></li>
+                <li><a href="#certificates" class="nav-link px-4 py-2 rounded-full hover:bg-gray-300">Certificates</a></li>
+                <li><a href="#badges" class="nav-link px-4 py-2 rounded-full hover:bg-gray-300">Badges</a></li>
+                <li><a href="#projects" class="nav-link px-4 py-2 rounded-full hover:bg-gray-300">Projects</a></li>
+                <li><a href="#contact" class="nav-link px-4 py-2 rounded-full hover:bg-gray-300">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Container -->
+    <main id="home" class="max-w-5xl mx-auto px-6 pt-40 pb-32 space-y-40">
+
+        <!-- About Section -->
+        <section id="about">
+            <h1 class="text-5xl font-semibold text-center mb-16 text-gray-900">About Me</h1>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-gray-600 leading-relaxed space-y-6 text-lg">
+                    <p>
+                        I am Nithyasri Selvaraj, a Computer Science & Engineering student specializing in Artificial Intelligence and Machine Learning, driven by curiosity, creativity, and a constant desire to learn.
+                        Like a masterless samurai navigating an ever-changing frontier, I approach technology with courage and purpose—embracing challenges, exploring new ideas, and turning complex problems into meaningful solutions.
+                    </p>
+                    <p>
+                        My interests span Artificial Intelligence, Machine Learning, Data Analytics, and Full-Stack Web Development. I enjoy breaking down complex concepts, experimenting with technology, and building digital experiences that are both practical and impactful.
+                        I believe that innovation begins with curiosity and grows through consistent learning. Every challenge is an opportunity to improve, every failure is a lesson, and every solution is a step forward.
+                </div>
+                <div class="flex justify-center">
+                    <div class="w-72 h-[400px] sm:w-80 sm:h-[440px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white transition-all duration-300 hover:scale-[1.02]">
+                        <img src="Portfolio_Pic.png" alt="Nithyasri S" class="w-full h-full object-cover object-top">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h1 class="text-4xl font-semibold text-center mb-12 text-gray-900">Skills</h1>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Skill Cards -->
+                <div class="bg-white rounded-3xl p-8 text-center card-shadow border border-gray-100 transition hover:-translate-y-1">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Data Analyst</h3>
+                    <p class="text-gray-600 leading-relaxed">Power BI , Tableau , MySQL , Python , Pandas , NumPy</p>
+                </div>
+                <div class="bg-white rounded-3xl p-8 text-center card-shadow border border-gray-100 transition hover:-translate-y-1">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">ML & Data Science</h3>
+                    <p class="text-gray-600 leading-relaxed">Python, Pandas, NumPy, Scikit-learn, PyTorch, TensorFlow</p>
+                </div>
+                <div class="bg-white rounded-3xl p-8 text-center card-shadow border border-gray-100 transition hover:-translate-y-1">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Frontend Development</h3>
+                    <p class="text-gray-600 leading-relaxed">React , JavaScript , HTML5 , CSS3 , TailwindCSS</p>
+                </div>
+                <div class="bg-white rounded-3xl p-8 text-center card-shadow border border-gray-100 transition hover:-translate-y-1">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Backend Development</h3>
+                    <p class="text-gray-600 leading-relaxed">Node.js , Python , Express , FastAPI , MongoDB , MySQL</p>
+                </div>
+                <div class="bg-white rounded-3xl p-8 text-center card-shadow border border-gray-100 transition hover:-translate-y-1">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Design & Tools</h3>
+                    <p class="text-gray-600 leading-relaxed">Figma , Autopsy , AirCrack-ng , Metasploit, Blender</p>
+                </div>
+                <div class="bg-white rounded-3xl p-8 text-center card-shadow border border-gray-100 transition hover:-translate-y-1">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Hobby Skills</h3>
+                    <p class="text-gray-600 leading-relaxed">Prompt Engineering , Reading Books</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificates Section -->
+        <section id="certificates">
+            <div class="text-center mb-8">
+                <h1 class="text-4xl font-semibold text-gray-900 mb-3">Certificates & Credentials</h1>
+                <p class="text-gray-500 text-sm">Explore certifications categorized by type</p>
+            </div>
+
+            <!-- Quick Navigation Pills -->
+            <div class="flex justify-center gap-3 mb-10 flex-wrap">
+                <a href="#internships" class="px-5 py-2 rounded-full text-sm font-medium bg-gray-200 text-gray-800 hover:bg-gray-800 hover:text-white transition">Internships</a>
+                <a href="#course-completion" class="px-5 py-2 rounded-full text-sm font-medium bg-gray-200 text-gray-800 hover:bg-gray-800 hover:text-white transition">Courses</a>
+                <a href="#workshops" class="px-5 py-2 rounded-full text-sm font-medium bg-gray-200 text-gray-800 hover:bg-gray-800 hover:text-white transition">Workshops</a>
+                <a href="#others" class="px-5 py-2 rounded-full text-sm font-medium bg-gray-200 text-gray-800 hover:bg-gray-800 hover:text-white transition">Others</a>
+            </div>
+
+            <div class="space-y-12">
+                <!-- 1. Internship Certificates -->
+                <div id="internships" class="space-y-4">
+                    <h2 class="text-2xl font-semibold text-gray-800 border-b border-gray-200 pb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-briefcase text-gray-600 text-lg"></i> Internship Certificates
+                    </h2>
+                    <div class="flex overflow-x-auto gap-6 pb-4 hide-scrollbar snap-x snap-mandatory scroll-smooth">
+                        
+                        <!-- Internship Card 1 -->
+                        <div class="flex-none w-[280px] sm:w-[320px] snap-center">
+                            <div class="bg-white rounded-3xl p-4 card-shadow border border-gray-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col">
+                                <div class="aspect-[4/3] bg-gray-100 rounded-2xl overflow-hidden mb-4 flex-shrink-0">
+                                    <img src="Images/Infocs_Internship.jpeg" alt="Internship Certificate" class="w-full h-full object-cover">
+                                </div>
+                                <h3 class="font-semibold text-gray-800 text-center px-2">Full Stack Web Application Development</h3>
+                                <p class="text-xs text-gray-500 text-center mt-1">Issued by INFOCS Technology</p>
+                            </div>
+                        </div>
+
+                        <!-- Internship Card 1 -->
+                        <div class="flex-none w-[280px] sm:w-[320px] snap-center">
+                            <div class="bg-white rounded-3xl p-4 card-shadow border border-gray-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col">
+                                <div class="aspect-[4/3] bg-gray-100 rounded-2xl overflow-hidden mb-4 flex-shrink-0">
+                                    <img src="Images/Vaizai_Internship.jpeg" alt="Internship Certificate" class="w-full h-full object-cover">
+                                </div>
+                                <h3 class="font-semibold text-gray-800 text-center px-2">AI/ML Internship</h3>
+                                <p class="text-xs text-gray-500 text-center mt-1">Issued by Vaizai Solutions</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 2. Course Completion Certificates -->
+                <div id="course-completion" class="space-y-4">
+                    <h2 class="text-2xl font-semibold text-gray-800 border-b border-gray-200 pb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-graduation-cap text-gray-600 text-lg"></i> Course Completions
+                    </h2>
+                    <div class="flex overflow-x-auto gap-6 pb-4 hide-scrollbar snap-x snap-mandatory scroll-smooth">
+                        
+                        <!-- Course Card 1 -->
+                        <div class="flex-none w-[280px] sm:w-[320px] snap-center">
+                            <div class="bg-white rounded-3xl p-4 card-shadow border border-gray-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col">
+                                <div class="aspect-[4/3] bg-gray-100 rounded-2xl overflow-hidden mb-4 flex-shrink-0">
+                                    <img src="Images/CSC_Python.jpeg" alt="Python Certification" class="w-full h-full object-cover">
+                                </div>
+                                <h3 class="font-semibold text-gray-800 text-center px-2">Python Certification</h3>
+                                <p class="text-xs text-gray-500 text-center mt-1">Issued by CSC</p>
+                            </div>
+                        </div>
+
+                        <!-- Course Card 2 -->
+                        <div class="flex-none w-[280px] sm:w-[320px] snap-center">
+                            <div class="bg-white rounded-3xl p-4 card-shadow border border-gray-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col">
+                                <div class="aspect-[4/3] bg-gray-100 rounded-2xl overflow-hidden mb-4 flex-shrink-0">
+                                    <img src="Images/CodeEmy_FullStack.jpeg" alt="Python Certification" class="w-full h-full object-cover">
+                                </div>
+                                <h3 class="font-semibold text-gray-800 text-center px-2">Full Stack Web Development</h3>
+                                <p class="text-xs text-gray-500 text-center mt-1">Issued by CodeEmy</p>
+                            </div>
+                        </div>
+
+                        <!-- Course Card 3 -->
+                        <div class="flex-none w-[280px] sm:w-[320px] snap-center">
+                            <div class="bg-white rounded-3xl p-4 card-shadow border border-gray-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col">
+                                <div class="aspect-[4/3] bg-gray-100 rounded-2xl overflow-hidden mb-4 flex-shrink-0">
+                                    <img src="Images/Simplilearn_C.jpeg" alt="Python Certification" class="w-full h-full object-cover">
+                                </div>
+                                <h3 class="font-semibold text-gray-800 text-center px-2">C Programming Certification</h3>
+                                <p class="text-xs text-gray-500 text-center mt-1">Issued by SimpliLearn</p>
+                            </div>
+                        </div>
+
+                        <!-- Course Card 4 -->
+                        <div class="flex-none w-[280px] sm:w-[320px] snap-center">
+                            <div class="bg-white rounded-3xl p-4 card-shadow border border-gray-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col">
+                                <div class="aspect-[4/3] bg-gray-100 rounded-2xl overflow-hidden mb-4 flex-shrink-0">
+                                    <img src="Images/Data_Analytics.jpeg" alt="Python Certification" class="w-full h-full object-cover">
+                                </div>
+                                <h3 class="font-semibold text-gray-800 text-center px-2">Data Analytics Certification</h3>
+                                <p class="text-xs text-gray-500 text-center mt-1">Issued by NoviTech</p>
+                            </div>
+                        </div>
+
+                        <!-- Course Card 5 -->
+                        <div class="flex-none w-[280px] sm:w-[320px] snap-center">
+                            <div class="bg-white rounded-3xl p-4 card-shadow border border-gray-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col">
+                                <div class="aspect-[4/3] bg-gray-100 rounded-2xl overflow-hidden mb-4 flex-shrink-0">
+                                    <img src="Images/IBM_DataAnalytics.jpeg" alt="Python Certification" class="w-full h-full object-cover">
+                                </div>
+                                <h3 class="font-semibold text-gray-800 text-center px-2">Data Analytics Certification</h3>
+                                <p class="text-xs text-gray-500 text-center mt-1">Issued by Trionix</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 3. Workshop Certificates -->
+                <div id="workshops" class="space-y-4">
+                    <h2 class="text-2xl font-semibold text-gray-800 border-b border-gray-200 pb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-chalkboard-user text-gray-600 text-lg"></i> Workshops & Seminars
+                    </h2>
+                    <div class="flex overflow-x-auto gap-6 pb-4 hide-scrollbar snap-x snap-mandatory scroll-smooth">
+                        
+                        <!-- Workshop Card 1 -->
+                        <div class="flex-none w-[280px] sm:w-[320px] snap-center">
+                            <div class="bg-white rounded-3xl p-4 card-shadow border border-gray-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col">
+                                <div class="aspect-[4/3] bg-gray-100 rounded-2xl overflow-hidden mb-4 flex-shrink-0">
+                                    <img src="Images/VSB_Nipam.jpeg" alt="PowerBI Workshop" class="w-full h-full object-cover">
+                                </div>
+                                <h3 class="font-semibold text-gray-800 text-center px-2">National IP Awareness Mission</h3>
+                                <p class="text-xs text-gray-500 text-center mt-1">Issued by NIPAM</p>
+                            </div>
+                        </div>
+
+                        <!-- Workshop Card 2 -->
+                        <div class="flex-none w-[280px] sm:w-[320px] snap-center">
+                            <div class="bg-white rounded-3xl p-4 card-shadow border border-gray-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col">
+                                <div class="aspect-[4/3] bg-gray-100 rounded-2xl overflow-hidden mb-4 flex-shrink-0">
+                                    <img src="Images/Attractive_DashBoard.jpeg" alt="NIPAM Awareness" class="w-full h-full object-cover">
+                                </div>
+                                <h3 class="font-semibold text-gray-800 text-center px-2">Attractive Dashboard in PowerBI</h3>
+                                <p class="text-xs text-gray-500 text-center mt-1">Issued by NoviTech</p>
+                            </div>
+                        </div>
+
+                        <!-- Workshop Card 3 -->
+                        <div class="flex-none w-[280px] sm:w-[320px] snap-center">
+                            <div class="bg-white rounded-3xl p-4 card-shadow border border-gray-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col">
+                                <div class="aspect-[4/3] bg-gray-100 rounded-2xl overflow-hidden mb-4 flex-shrink-0">
+                                    <img src="Images/GithubGuide.jpeg" alt="NIPAM Awareness" class="w-full h-full object-cover">
+                                </div>
+                                <h3 class="font-semibold text-gray-800 text-center px-2">GitHub Guide for Emerging Technologies</h3>
+                                <p class="text-xs text-gray-500 text-center mt-1">Issued by NoviTech</p>
+                            </div>
+                        </div>
+
+                        <!-- Workshop Card 4 -->
+                        <div class="flex-none w-[280px] sm:w-[320px] snap-center">
+                            <div class="bg-white rounded-3xl p-4 card-shadow border border-gray-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col">
+                                <div class="aspect-[4/3] bg-gray-100 rounded-2xl overflow-hidden mb-4 flex-shrink-0">
+                                    <img src="Images/Power_BI.jpeg" alt="NIPAM Awareness" class="w-full h-full object-cover">
+                                </div>
+                                <h3 class="font-semibold text-gray-800 text-center px-2">Retail Sales and Growth Dashboard</h3>
+                                <p class="text-xs text-gray-500 text-center mt-1">Issued by NoviTech</p>
+                            </div>
+                        </div>
+
+                        <!-- Workshop Card 5 -->
+                        <div class="flex-none w-[280px] sm:w-[320px] snap-center">
+                            <div class="bg-white rounded-3xl p-4 card-shadow border border-gray-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col">
+                                <div class="aspect-[4/3] bg-gray-100 rounded-2xl overflow-hidden mb-4 flex-shrink-0">
+                                    <img src="Images/React_Application.jpeg" alt="NIPAM Awareness" class="w-full h-full object-cover">
+                                </div>
+                                <h3 class="font-semibold text-gray-800 text-center px-2">First React Application</h3>
+                                <p class="text-xs text-gray-500 text-center mt-1">Issued by NoviTech</p>
+                            </div>
+                        </div>
+
+                        <!-- Workshop Card 6 -->
+                        <div class="flex-none w-[280px] sm:w-[320px] snap-center">
+                            <div class="bg-white rounded-3xl p-4 card-shadow border border-gray-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col">
+                                <div class="aspect-[4/3] bg-gray-100 rounded-2xl overflow-hidden mb-4 flex-shrink-0">
+                                    <img src="Images/VSB_GenAI.jpeg" alt="NIPAM Awareness" class="w-full h-full object-cover">
+                                </div>
+                                <h3 class="font-semibold text-gray-800 text-center px-2">Generative AI at INFOTRIX'25</h3>
+                                <p class="text-xs text-gray-500 text-center mt-1">Issued by VSB College of Engineering Technical Campus</p>
+                            </div>
+                        </div>
+
+                        <!-- Workshop Card 7 -->
+                        <div class="flex-none w-[280px] sm:w-[320px] snap-center">
+                            <div class="bg-white rounded-3xl p-4 card-shadow border border-gray-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col">
+                                <div class="aspect-[4/3] bg-gray-100 rounded-2xl overflow-hidden mb-4 flex-shrink-0">
+                                    <img src="Images/TCS_ION.jpeg" alt="NIPAM Awareness" class="w-full h-full object-cover">
+                                </div>
+                                <h3 class="font-semibold text-gray-800 text-center px-2">TCS iON Career Edge - Young Professional</h3>
+                                <p class="text-xs text-gray-500 text-center mt-1">Issued by TCS iON</p>
+                            </div>
+                        </div>
+
+                        <!-- Workshop Card 8 -->
+                        <div class="flex-none w-[280px] sm:w-[320px] snap-center">
+                            <div class="bg-white rounded-3xl p-4 card-shadow border border-gray-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col">
+                                <div class="aspect-[4/3] bg-gray-100 rounded-2xl overflow-hidden mb-4 flex-shrink-0">
+                                    <img src="Images/Hindustan_PPT.jpeg" alt="NIPAM Awareness" class="w-full h-full object-cover">
+                                </div>
+                                <h3 class="font-semibold text-gray-800 text-center px-2">Paper Presentation</h3>
+                                <p class="text-xs text-gray-500 text-center mt-1">Issued by Hindusthan College of Engineering and Technology</p>
+                            </div>
+                        </div>
+
+                        <!-- Workshop Card 9 -->
+                        <div class="flex-none w-[280px] sm:w-[320px] snap-center">
+                            <div class="bg-white rounded-3xl p-4 card-shadow border border-gray-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col">
+                                <div class="aspect-[4/3] bg-gray-100 rounded-2xl overflow-hidden mb-4 flex-shrink-0">
+                                    <img src="Images/KPR_PPT.jpeg" alt="NIPAM Awareness" class="w-full h-full object-cover">
+                                </div>
+                                <h3 class="font-semibold text-gray-800 text-center px-2">Paper Presentation</h3>
+                                <p class="text-xs text-gray-500 text-center mt-1">Issued by KPR Institute of Engineering and Technology</p>
+                            </div>
+                        </div>
+
+                        <!-- Workshop Card 10 -->
+                        <div class="flex-none w-[280px] sm:w-[320px] snap-center">
+                            <div class="bg-white rounded-3xl p-4 card-shadow border border-gray-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col">
+                                <div class="aspect-[4/3] bg-gray-100 rounded-2xl overflow-hidden mb-4 flex-shrink-0">
+                                    <img src="Images/KPR_WorkShop.jpeg" alt="NIPAM Awareness" class="w-full h-full object-cover">
+                                </div>
+                                <h3 class="font-semibold text-gray-800 text-center px-2">CREAFEST'25</h3>
+                                <p class="text-xs text-gray-500 text-center mt-1">Issued by KPR Institute of Engineering and Technology</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 4. Others Category -->
+                <div id="others" class="space-y-4">
+                    <h2 class="text-2xl font-semibold text-gray-800 border-b border-gray-200 pb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-certificate text-gray-600 text-lg"></i> Other Achievements & Credentials
+                    </h2>
+                    <div class="flex overflow-x-auto gap-6 pb-4 hide-scrollbar snap-x snap-mandatory scroll-smooth">
+                        
+                        <!-- Others Card 1 -->
+                        <div class="flex-none w-[280px] sm:w-[320px] snap-center">
+                            <div class="bg-white rounded-3xl p-4 card-shadow border border-gray-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col">
+                                <div class="aspect-[4/3] bg-gray-100 rounded-2xl overflow-hidden mb-4 flex-shrink-0">
+                                    <img src="Images/Campus_Ambassador.jpeg" alt="Other Achievement" class="w-full h-full object-cover">
+                                </div>
+                                <h3 class="font-semibold text-gray-800 text-center px-2">Campus Ambassador</h3>
+                                <p class="text-xs text-gray-500 text-center mt-1">Issued by Alfrah Cognix Innovations</p>
+                            </div>
+                        </div>
+
+                        <!-- Others Card 2 -->
+                        <div class="flex-none w-[280px] sm:w-[320px] snap-center">
+                            <div class="bg-white rounded-3xl p-4 card-shadow border border-gray-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col">
+                                <div class="aspect-[4/3] bg-gray-100 rounded-2xl overflow-hidden mb-4 flex-shrink-0">
+                                    <img src="Images/Coursera_MicrosoftExcel.jpeg" alt="Other Achievement" class="w-full h-full object-cover">
+                                </div>
+                                <h3 class="font-semibold text-gray-800 text-center px-2">Microsoft Excel</h3>
+                                <p class="text-xs text-gray-500 text-center mt-1">Issued by Coursera</p>
+                            </div>
+                        </div>
+
+                        <!-- Others Card 3 -->
+                        <div class="flex-none w-[280px] sm:w-[320px] snap-center">
+                            <div class="bg-white rounded-3xl p-4 card-shadow border border-gray-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col">
+                                <div class="aspect-[4/3] bg-gray-100 rounded-2xl overflow-hidden mb-4 flex-shrink-0">
+                                    <img src="Images/Microsoft_DataAnalysis.jpeg" alt="Other Achievement" class="w-full h-full object-cover">
+                                </div>
+                                <h3 class="font-semibold text-gray-800 text-center px-2">Data Analysis</h3>
+                                <p class="text-xs text-gray-500 text-center mt-1">Issued by Coursera</p>
+                            </div>
+                        </div>
+
+                        <!-- Others Card 4 -->
+                        <div class="flex-none w-[280px] sm:w-[320px] snap-center">
+                            <div class="bg-white rounded-3xl p-4 card-shadow border border-gray-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col">
+                                <div class="aspect-[4/3] bg-gray-100 rounded-2xl overflow-hidden mb-4 flex-shrink-0">
+                                    <img src="Images/Microsoft_ComputerVisionApp.jpeg" alt="Other Achievement" class="w-full h-full object-cover">
+                                </div>
+                                <h3 class="font-semibold text-gray-800 text-center px-2">Computer Vision App</h3>
+                                <p class="text-xs text-gray-500 text-center mt-1">Issued by Microsoft</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Badges Section (Now with Flip Cards & Descriptions) -->
+        <section id="badges">
+            <h1 class="text-4xl font-semibold text-center mb-12 text-gray-900">Badges</h1>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-10 max-w-4xl mx-auto px-4">
+                
+                <!-- Badge 1: 50 Days (Flip Card) -->
+                <div class="w-full max-w-[300px] perspective aspect-square cursor-pointer card-flip-trigger">
+                    <div class="card-inner relative w-full h-full duration-700 transform-style-3d transition-transform">
+                        
+                        <!-- Front Face: Image Only -->
+                        <div class="absolute inset-0 bg-white rounded-3xl p-4 flex flex-col items-center justify-center card-shadow border border-gray-100 backface-hidden shadow-lg">
+                            <img src="50_day_batch.png" alt="LeetCode 50 Days Badge" class="w-[85%] h-[85%] object-cover rounded-2xl">
+                            <!-- Small hint to click -->
+                            <div class="absolute bottom-4 bg-gray-100 text-gray-500 text-[10px] uppercase tracking-wider font-bold px-3 py-1 rounded-full">Click to flip</div>
+                        </div>
+
+                        <!-- Back Face: Description -->
+                        <div class="absolute inset-0 bg-gray-900 text-white rounded-3xl p-6 flex flex-col items-center justify-center text-center shadow-xl border border-gray-800 backface-hidden rotate-y-180">
+                            <i class="fa-solid fa-fire text-4xl mb-4 text-green-400"></i>
+                            <h3 class="text-2xl font-bold mb-3">LeetCode 50 Days</h3>
+                            <p class="text-sm text-gray-300 mb-6 leading-relaxed">
+                                Awarded for consistent dedication and problem-solving on LeetCode for 50 active days.
+                            </p>
+                            <div class="text-[10px] text-gray-400 uppercase tracking-widest mt-auto">Click to return</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Badge 2: 100 Days (Flip Card) -->
+                <div class="w-full max-w-[300px] perspective aspect-square cursor-pointer card-flip-trigger">
+                    <div class="card-inner relative w-full h-full duration-700 transform-style-3d transition-transform">
+                        
+                        <!-- Front Face: Image Only -->
+                        <div class="absolute inset-0 bg-white rounded-3xl p-4 flex flex-col items-center justify-center card-shadow border border-gray-100 backface-hidden shadow-lg">
+                            <img src="100_day-batch.png" alt="LeetCode 100 Days Badge" class="w-[85%] h-[85%] object-cover rounded-2xl">
+                            <div class="absolute bottom-4 bg-gray-100 text-gray-500 text-[10px] uppercase tracking-wider font-bold px-3 py-1 rounded-full">Click to flip</div>
+                        </div>
+
+                        <!-- Back Face: Description -->
+                        <div class="absolute inset-0 bg-gray-900 text-white rounded-3xl p-6 flex flex-col items-center justify-center text-center shadow-xl border border-gray-800 backface-hidden rotate-y-180">
+                            <i class="fa-solid fa-bolt text-4xl mb-4 text-blue-400"></i>
+                            <h3 class="text-2xl font-bold mb-3">LeetCode 100 Days</h3>
+                            <p class="text-sm text-gray-300 mb-6 leading-relaxed">
+                                A major milestone representing relentless commitment. Achieved 100 days of coding challenges.
+                            </p>
+                            <div class="text-[10px] text-gray-400 uppercase tracking-widest mt-auto">Click to return</div>
+                        </div>
+
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-12 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-semibold text-center mb-16 text-gray-900">Featured Projects</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                    <!-- Project 1: Naruto Theme Invitation -->
+                    <div class="group bg-white rounded-3xl overflow-hidden border border-gray-100 flex flex-col 
+                                transition-all duration-300 ease-out
+                                shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05),0_2px_4px_-1px_rgba(0,0,0,0.03)]
+                                hover:shadow-[0_20px_25px_-5px_rgba(0,0,0,0.1),0_10px_10px_-5px_rgba(0,0,0,0.04)]
+                                hover:-translate-y-4 hover:scale-[1.02]">
+
+                        <div class="h-48 bg-gradient-to-r from-orange-500 to-amber-500 flex items-center justify-center text-white text-5xl relative overflow-hidden">
+                            <i class="fa-solid fa-scroll relative z-10 transition-transform duration-300 group-hover:scale-110"></i>
+                            <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+                        </div>
+
+                        <div class="p-8 flex-1 flex flex-col">
+                            <h3 class="text-2xl font-bold mb-2 text-gray-900">Naruto Theme Invitation</h3>
+                            <p class="text-gray-600 mb-6 flex-1">An interactive Naruto-themed digital invitation featuring custom anime styling and engaging web elements.</p>
+
+                            <div class="flex flex-wrap gap-2 mb-8">
+                                <span class="px-3 py-1 bg-orange-50 text-orange-700 text-xs font-semibold rounded-full border border-orange-100">HTML5</span>
+                                <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full border border-blue-100">CSS3</span>
+                                <span class="px-3 py-1 bg-amber-50 text-amber-700 text-xs font-semibold rounded-full border border-amber-100">JavaScript</span>
+                            </div>
+
+                            <div class="flex gap-4 mt-auto">
+                                <a href="https://github.com/S-Nithyasri-2006/Naruto_Theme_Invitation" target="_blank" rel="noopener noreferrer" 
+                                class="inline-block bg-gray-900 text-white px-8 py-3 rounded-full text-sm font-semibold 
+                                        transition-all duration-200 shadow-md
+                                        hover:bg-gray-700 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0">
+                                View Project
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: GenZ Admission ML -->
+                    <div class="group bg-white rounded-3xl overflow-hidden border border-gray-100 flex flex-col 
+                                transition-all duration-300 ease-out
+                                shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05),0_2px_4px_-1px_rgba(0,0,0,0.03)]
+                                hover:shadow-[0_20px_25px_-5px_rgba(0,0,0,0.1),0_10px_10px_-5px_rgba(0,0,0,0.04)]
+                                hover:-translate-y-4 hover:scale-[1.02]">
+
+                        <div class="h-48 bg-gradient-to-r from-indigo-600 to-purple-600 flex items-center justify-center text-white text-5xl relative overflow-hidden">
+                            <i class="fa-solid fa-graduation-cap relative z-10 transition-transform duration-300 group-hover:scale-110"></i>
+                            <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+                        </div>
+
+                        <div class="p-8 flex-1 flex flex-col">
+                            <h3 class="text-2xl font-bold mb-2 text-gray-900">GenZ Admission ML</h3>
+                            <p class="text-gray-600 mb-6 flex-1">A machine learning model predicting university admission probabilities based on academic profiles and test scores.</p>
+
+                            <div class="flex flex-wrap gap-2 mb-8">
+                                <span class="px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-semibold rounded-full border border-indigo-100">Python</span>
+                                <span class="px-3 py-1 bg-purple-50 text-purple-700 text-xs font-semibold rounded-full border border-purple-100">Pandas</span>
+                                <span class="px-3 py-1 bg-amber-50 text-amber-700 text-xs font-semibold rounded-full border border-amber-100">Scikit-Learn</span>
+                            </div>
+
+                            <div class="flex gap-4 mt-auto">
+                                <a href="https://github.com/S-Nithyasri-2006/GenZ_Admission_ML" target="_blank" rel="noopener noreferrer" 
+                                class="inline-block bg-gray-900 text-white px-8 py-3 rounded-full text-sm font-semibold 
+                                        transition-all duration-200 shadow-md
+                                        hover:bg-gray-700 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0">
+                                View Project
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="pb-20">
+            <div class="flex flex-col items-center text-center">
+            <!-- Header Icon -->
+                <div class="w-16 h-16 bg-gray-900 text-white rounded-2xl flex items-center justify-center text-2xl mb-8 shadow-lg">
+                    <i class="fa-solid fa-link" aria-hidden="true"></i>
+                </div>
+
+                <!-- Heading & Subtitle -->
+                <h2 class="text-4xl font-semibold mb-4 text-gray-900">Join Networks</h2>
+                <p class="text-gray-600 mb-10 text-lg max-w-md">"Let's innovate together and build groundbreaking tech solutions."</p>
+        
+                <!-- Social & Contact Links -->
+                <div class="flex gap-6 text-3xl text-gray-800">
+                    <a href="https://github.com/S-Nithyasri-2006" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="hover:text-gray-500 transition-transform duration-200 hover:-translate-y-1">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/nithyasri-selvaraj-96b060348" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="hover:text-gray-500 transition-transform duration-200 hover:-translate-y-1">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/nithya200619/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile" class="hover:text-gray-500 transition-transform duration-200 hover:-translate-y-1">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="mailto:nithyasriselvaraj2006@gmail.com" aria-label="Send Email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- JavaScript Scripts -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Scroll Spy Navigation
+            const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll(".nav-link");
+
+            const observerOptions = {
+                root: null,
+                rootMargin: "-20% 0px -60% 0px", 
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach((link) => {
+                            link.classList.remove("active", "bg-gray-800", "text-white");
+                            link.classList.add("text-gray-600");
+                        });
+
+                        const activeId = entry.target.getAttribute("id");
+                        const activeLink = document.querySelector(`.nav-link[href="#${activeId}"]`);
+                        
+                        if (activeLink) {
+                            activeLink.classList.add("active", "bg-gray-800", "text-white");
+                            activeLink.classList.remove("text-gray-600");
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach((section) => observer.observe(section));
+
+            // Flip Card Logic for Badges
+            const cardTriggers = document.querySelectorAll(".card-flip-trigger");
+            cardTriggers.forEach((trigger) => {
+                trigger.addEventListener("click", (e) => {
+                    // Prevent flipping if they clicked a link inside the card
+                    if (e.target.closest('a')) return; 
+                    
+                    const cardInner = trigger.querySelector(".card-inner");
+                    cardInner.classList.toggle("rotate-y-180");
+                });
+            });
+        });
+    </script>
+</body>
+</html>
