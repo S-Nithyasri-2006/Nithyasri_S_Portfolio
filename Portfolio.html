@@ -153,6 +153,7 @@
                 <a href="#internships" class="px-5 py-2 rounded-full text-sm font-medium bg-gray-200 text-gray-800 hover:bg-gray-800 hover:text-white transition">Internships</a>
                 <a href="#course-completion" class="px-5 py-2 rounded-full text-sm font-medium bg-gray-200 text-gray-800 hover:bg-gray-800 hover:text-white transition">Courses</a>
                 <a href="#workshops" class="px-5 py-2 rounded-full text-sm font-medium bg-gray-200 text-gray-800 hover:bg-gray-800 hover:text-white transition">Workshops</a>
+                <a href="#hackathons" class="px-5 py-2 rounded-full text-sm font-medium bg-gray-200 text-gray-800 hover:bg-gray-800 hover:text-white transition">Hackathons</a>
                 <a href="#others" class="px-5 py-2 rounded-full text-sm font-medium bg-gray-200 text-gray-800 hover:bg-gray-800 hover:text-white transition">Others</a>
             </div>
 
@@ -374,7 +375,28 @@
                     </div>
                 </div>
 
-                <!-- 4. Others Category -->
+                <!-- 4. Hackathon Certificates -->
+                <div id="hackathons" class="space-y-4">
+                    <h2 class="text-2xl font-semibold text-gray-800 border-b border-gray-200 pb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-code text-gray-600 text-lg"></i> Hackathons
+                    </h2>
+                    <div class="flex overflow-x-auto gap-6 pb-4 hide-scrollbar snap-x snap-mandatory scroll-smooth">
+                        
+                        <!-- Hackathon Card 1 -->
+                        <div class="flex-none w-[280px] sm:w-[320px] snap-center">
+                            <div class="bg-white rounded-3xl p-4 card-shadow border border-gray-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col">
+                                <div class="aspect-[4/3] bg-gray-100 rounded-2xl overflow-hidden mb-4 flex-shrink-0">
+                                    <img src="Images/Adobe Certificate.jpg" alt="Hackathon Certificate" class="w-full h-full object-cover">
+                                </div>
+                                <h3 class="font-semibold text-gray-800 text-center px-2">Hackathon Name / Title</h3>
+                                <p class="text-xs text-gray-500 text-center mt-1">Issued by Organizing Body</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 5. Others Category -->
                 <div id="others" class="space-y-4">
                     <h2 class="text-2xl font-semibold text-gray-800 border-b border-gray-200 pb-2 flex items-center gap-2">
                         <i class="fa-solid fa-certificate text-gray-600 text-lg"></i> Other Achievements & Credentials
@@ -443,7 +465,7 @@
                         
                         <!-- Front Face: Image Only -->
                         <div class="absolute inset-0 bg-white rounded-3xl p-4 flex flex-col items-center justify-center card-shadow border border-gray-100 backface-hidden shadow-lg">
-                            <img src="50_day_badge.png" alt="LeetCode 50 Days Badge" class="w-[85%] h-[85%] object-cover rounded-2xl">
+                            <img src="Badges/50_day_badge.png" alt="LeetCode 50 Days Badge" class="w-[85%] h-[85%] object-cover rounded-2xl">
                             <!-- Small hint to click -->
                             <div class="absolute bottom-4 bg-gray-100 text-gray-500 text-[10px] uppercase tracking-wider font-bold px-3 py-1 rounded-full">Click to flip</div>
                         </div>
@@ -467,7 +489,7 @@
                         
                         <!-- Front Face: Image Only -->
                         <div class="absolute inset-0 bg-white rounded-3xl p-4 flex flex-col items-center justify-center card-shadow border border-gray-100 backface-hidden shadow-lg">
-                            <img src="100_day-badge.png" alt="LeetCode 100 Days Badge" class="w-[85%] h-[85%] object-cover rounded-2xl">
+                            <img src="Badges/100_day-badge.png" alt="LeetCode 100 Days Badge" class="w-[85%] h-[85%] object-cover rounded-2xl">
                             <div class="absolute bottom-4 bg-gray-100 text-gray-500 text-[10px] uppercase tracking-wider font-bold px-3 py-1 rounded-full">Click to flip</div>
                         </div>
 
@@ -484,13 +506,36 @@
                     </div>
                 </div>
 
-                <!-- Badge 3: SQL 50 (Flip Card) -->
+                <!-- Badge 3: 200 Days (Flip Card) -->
+                <div class="w-full max-w-[300px] perspective aspect-square cursor-pointer card-flip-trigger">
+                    <div class="card-inner relative w-full h-full duration-700 transform-style-3d transition-transform">
+                        
+                        <!-- Front Face: Image Only -->
+                        <div class="absolute inset-0 bg-white rounded-3xl p-4 flex flex-col items-center justify-center card-shadow border border-gray-100 backface-hidden shadow-lg">
+                            <img src="Badges/200_day_badge.jpeg" alt="LeetCode 200 Days Badge" class="w-[85%] h-[85%] object-cover rounded-2xl">
+                            <div class="absolute bottom-4 bg-gray-100 text-gray-500 text-[10px] uppercase tracking-wider font-bold px-3 py-1 rounded-full">Click to flip</div>
+                        </div>
+
+                        <!-- Back Face: Description -->
+                        <div class="absolute inset-0 bg-gray-900 text-white rounded-3xl p-6 flex flex-col items-center justify-center text-center shadow-xl border border-gray-800 backface-hidden rotate-y-180">
+                            <i class="fa-solid fa-trophy text-4xl mb-4 text-yellow-400"></i>
+                            <h3 class="text-2xl font-bold mb-3">LeetCode 200 Days</h3>
+                            <p class="text-sm text-gray-300 mb-6 leading-relaxed">
+                                An elite achievement showcasing extraordinary discipline and long-term mastery through 200 days of active coding.
+                            </p>
+                            <div class="text-[10px] text-gray-400 uppercase tracking-widest mt-auto">Click to return</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Badge 4: SQL 50 (Flip Card) -->
                 <div class="w-full max-w-[300px] perspective aspect-square cursor-pointer card-flip-trigger">
                     <div class="card-inner relative w-full h-full duration-700 transform-style-3d transition-transform">
         
                         <!-- Front Face: Image Only -->
                         <div class="absolute inset-0 bg-white rounded-3xl p-4 flex flex-col items-center justify-center card-shadow border border-gray-100 backface-hidden shadow-lg">
-                            <img src="SQL_Badge.jpeg" alt="LeetCode SQL 50 Badge" class="w-[85%] h-[85%] object-cover rounded-2xl">
+                            <img src="Badges/SQL_Badge.jpeg" alt="LeetCode SQL 50 Badge" class="w-[85%] h-[85%] object-cover rounded-2xl">
                             <div class="absolute bottom-4 bg-gray-100 text-gray-500 text-[10px] uppercase tracking-wider font-bold px-3 py-1 rounded-full">Click to flip</div>
                         </div>
 
@@ -577,6 +622,39 @@
                                 class="inline-block bg-gray-900 text-white px-8 py-3 rounded-full text-sm font-semibold 
                                         transition-all duration-200 shadow-md
                                         hover:bg-gray-700 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0">
+                                View Project
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Bean Buddy AI Barista -->
+                    <div class="group bg-white rounded-3xl overflow-hidden border border-gray-100 flex flex-col 
+                            transition-all duration-300 ease-out
+                            shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05),0_2px_4px_-1px_rgba(0,0,0,0.03)]
+                            hover:shadow-[0_20px_25px_-5px_rgba(0,0,0,0.1),0_10px_10px_-5px_rgba(0,0,0,0.04)]
+                            hover:-translate-y-4 hover:scale-[1.02]">
+
+                        <div class="h-48 bg-gradient-to-r from-amber-700 to-orange-600 flex items-center justify-center text-white text-5xl relative overflow-hidden">
+                            <i class="fa-solid fa-mug-hot relative z-10 transition-transform duration-300 group-hover:scale-110"></i>
+                            <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+                        </div>
+
+                        <div class="p-8 flex-1 flex flex-col">
+                            <h3 class="text-2xl font-bold mb-2 text-gray-900">Bean Buddy AI Barista</h3>
+                            <p class="text-gray-600 mb-6 flex-1">An interactive generative AI-powered barista application delivering personalized coffee recommendations and smart conversational support.</p>
+
+                            <div class="flex flex-wrap gap-2 mb-8">
+                                <span class="px-3 py-1 bg-amber-50 text-amber-700 text-xs font-semibold rounded-full border border-amber-100">Python</span>
+                                <span class="px-3 py-1 bg-orange-50 text-orange-700 text-xs font-semibold rounded-full border border-orange-100">GenAI</span>
+                                <span class="px-3 py-1 bg-yellow-50 text-yellow-700 text-xs font-semibold rounded-full border border-yellow-100">Streamlit</span>
+                            </div>
+
+                            <div class="flex gap-4 mt-auto">
+                                <a href="https://github.com/S-Nithyasri-2006/Bean-Buddy-AI-Barista---GenAI" target="_blank" rel="noopener noreferrer" 
+                                class="inline-block bg-gray-900 text-white px-8 py-3 rounded-full text-sm font-semibold 
+                                    transition-all duration-200 shadow-md
+                                    hover:bg-gray-700 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0">
                                 View Project
                                 </a>
                             </div>
