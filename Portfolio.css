@@ -1,0 +1,191 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fafafa;
+    color: #1a1a1a;
+}
+
+/* Custom subtle shadow for standard cards */
+.card-shadow {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Offset for smooth scrolling so headers don't hide under navbar */
+section {
+    scroll-margin-top: 140px;
+}
+
+/* Navigation active state transition */
+.nav-link {
+    transition: all 0.3s ease;
+}
+
+.nav-link.active {
+    background-color: #1f2937;
+    color: white;
+}
+
+/* Hide scrollbar for certificates slider but keep functionality */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* 3D Flip Card CSS */
+.perspective {
+    perspective: 1000px;
+}
+
+.transform-style-3d {
+    transform-style: preserve-3d;
+}
+
+.backface-hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+    transform: rotateY(180deg);
+}
+
+/* Badge cards */
+.badge-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    max-width: 100%;
+    padding: 10px 8px 25px;
+    overflow-x: auto;
+    perspective: 1200px;
+}
+
+.badge-card {
+    width: 200px;
+    height: 250px;
+    flex: 0 0 200px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.7s ease;
+}
+
+.badge-card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.badge-front,
+.badge-back {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 16px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    overflow: hidden;
+}
+
+.badge-front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.10);
+}
+
+.badge-front img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.badge-front h3 {
+    margin: 0;
+    color: #111827;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.badge-front span {
+    color: #6b7280;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.badge-back {
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    text-align: center;
+    color: #ffffff;
+    background: #111827;
+    border: 1px solid #374151;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.15);
+}
+
+.badge-back i {
+    font-size: 30px;
+    margin-bottom: 14px;
+}
+
+.badge-back h3 {
+    margin: 0 0 12px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.badge-back p {
+    margin: 0 0 14px;
+    color: #d1d5db;
+    font-size: 12px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.badge-back span {
+    margin-top: auto;
+    color: #9ca3af;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+    .badge-container {
+        gap: 14px;
+    }
+
+    .badge-card {
+        width: 185px;
+        height: 235px;
+        flex-basis: 185px;
+    }
+
+    .badge-front img {
+        width: 135px;
+        height: 135px;
+    }
+}
